@@ -29,7 +29,7 @@ const LoanForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://127.0.0.1:8000/loan/predict/', formData);
+        const response = await axios.post('https://pinjol.be.technosmart.id/loan/predict/', formData);
         console.log(formData);
         setPrediction(response.data.prediction);
       } catch (error) {
